@@ -1,0 +1,35 @@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 3MB
+      max-request-size: 3MB
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    dispatch-options-request: true
+  jackson:
+    default-property-inclusion: ALWAYS
+    serialization:
+      write-dates-as-timestamps: false
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB_NAME:multi_owner_hostel}
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:MySQL$123}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3====User====Management====B6250645367566B5970
+      expiration: 86000000 # a day
+      refresh-token:
+        expiration: 86400000 # a days
