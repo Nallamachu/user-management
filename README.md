@@ -5,7 +5,7 @@ User management application created for base framework of User management. This 
 This application will have two default users like Admin & Manager. It also provides the API documentation. Kindly visit
 the <a href="http://localhost:8080/swagger-ui/index.html">Open API Document</a> once application is up and running.
 
-![img.png](document/img.png)
+<!-- ![img.png](document/img.png) -->
 
 ## High level hierarchy of User Management
 
@@ -32,7 +32,7 @@ in **application.yml** file.
 ```dtd
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/hostel
+    url: jdbc:mysql://localhost:3306/user-db
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
